@@ -2,38 +2,69 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Beasiswa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div>Logo
-            <img src="logo_web-removebg-preview.png" alt="">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo_web-removebg-preview.png" alt="Logo">
+            <span>NextStep</span>
         </div>
-
-        <ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-links">
             <li><a href="HalamanUtama.html">Home</a></li>
             <li><a href="HalamanAwal_lomba.html">Lomba</a></li>
-            <li><a href="HalamanAwal_beasiswa.html">Beasiswa</a></li>
+            <li><a href="HalamanAwal_beasiswa.html" class="active">Beasiswa</a></li>
             <li><a href="HalamanAwal_magang.html">Magang</a></li>
             <li><a href="HalamanAwal_volunteer.html">Volunteer</a></li>
         </ul>
     </nav>
 
-    <h2>Temukan Beasiswamu di Sini</h2>
+    <div class="beasiswa-container">
 
-    <div>
-        <input type="text" placeholder="Cari beasiswa sesuai minatmu">
-        <button>Cari Beasiswa</button>
+        <div class="beasiswa-header">
+            <h2>Temukan Beasiswamu di Sini</h2>
+            
+            <div class="search-wrapper-beasiswa">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Cari beasiswa sesuai minatmu">
+                <button>Cari Beasiswa</button>
+            </div>
+        </div>
+
+        <div class="beasiswa-content">
+            
+            <div class="content-left-beasiswa">
+                <h3>Temukan Berdasarkan Kategori</h3>
+                <div class="beasiswa-button-stack">
+                    <button class="btn-beasiswa">
+                        Beasiswa Mahasiswa (S1/S2) <span>&gt;</span>
+                    </button>
+                    <button class="btn-beasiswa">
+                        Beasiswa Pelajar <span>&gt;</span>
+                    </button>
+                    <button class="btn-beasiswa">
+                        Beasiswa Luar Negeri <span>&gt;</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-right-beasiswa">
+                <img src="gambar beasiswa.png" alt="Ilustrasi Beasiswa">
+            </div>
+
+        </div>
+
     </div>
-
-    <h3>Temukan Berdasarkan Kategori</h3>
-    <img src="gambar beasiswa.png" alt="">
-    <div>
-        <button>Beasiswa Mahasiswa (S1/S2) ></button>
-        <button>Beasiswa Pelajar ></button>
-        <button>Beasiswa Luar Negeri ></button>
-    </div>
-
+<script src="script.js"></script> 
 </body>
 </html>

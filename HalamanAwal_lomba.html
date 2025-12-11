@@ -2,41 +2,84 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Lomba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div>Logo
-            <img src="logo_web-removebg-preview.png" alt="">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo_web-removebg-preview.png" alt="Logo">
+            <span>NextStep</span>
         </div>
-        <ul>
+        
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
             <li><a href="HalamanUtama.html">Home</a></li>
-            <li><a href="HalamanAwal_lomba.html">Lomba</a></li>
+            <li><a href="HalamanAwal_lomba.html" class="active">Lomba</a></li>
             <li><a href="HalamanAwal_beasiswa.html">Beasiswa</a></li>
             <li><a href="HalamanAwal_magang.html">Magang</a></li>
             <li><a href="HalamanAwal_volunteer.html">Volunteer</a></li>
         </ul>
     </nav>
 
-    <h2>Temukan lomba di dalam & luar negeri</h2>
+    <div class="lomba-container">
 
-    <!-- Search -->
-    <div>
-        <img src="gambar lomba.png" alt="">
-        <input type="text" placeholder="Cari lomba atau kompetisi">
-        <button>Cari Lomba</button>
+        <div class="lomba-header">
+            <h2>Temukan lomba di dalam & luar negeri</h2>
+            
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Cari lomba atau kompetisi">
+                <button>Cari Lomba</button>
+            </div>
+        </div>
+
+        <div class="lomba-content">
+            
+            <div class="content-left-lomba">
+                <h3>Temukan Berdasarkan Kategori</h3>
+                
+                <div class="lomba-buttons">
+                    <button class="lomba-btn">
+                        <img src="ikon uang lomba.png" alt="" class="btn-icon">
+                        <span>Finance & Business</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="lomba-btn">
+                        <img src="ikon academics lomba.png" alt="" class="btn-icon">
+                        <span>Academics</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="lomba-btn">
+                        <img src="ikon creative lomba.png" alt="" class="btn-icon">
+                        <span>Creative</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="lomba-btn">
+                        <img src="ikon teknologi lomba.png" alt="" class="btn-icon">
+                        <span>Technology</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                </div>
+            </div>
+            <div id="lomba-result-container">
+                
+            </div>
+            <div class="content-right-lomba">
+                <img src="gambar lomba.png" alt="Piala Lomba">
+            </div>
+
+        </div>
+
     </div>
-
-    <h3>Temukan Berdasarkan Kategori</h3>
-
-    <div>
-        <button>Finance & Business ><img src="ikon uang lomba.png" alt=""></button>
-        <button>Academics ><img src="ikon academics lomba.png" alt=""></button>
-        <button>Creative ><img src="ikon creative lomba.png" alt=""></button>
-        <button>Technology ><img src="ikon teknologi lomba.png" alt=""></button>
-    </div>
-
+<script src="script.js"></script> 
 </body>
 </html>
