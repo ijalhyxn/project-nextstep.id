@@ -312,3 +312,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 });
+/* ==========================================================
+   FUNGSI FILTER KATEGORI (Show/Hide)
+   ========================================================== */
+
+function filterCategory(categoryId, btnElement) {
+    // 1. Ubah tampilan tombol Aktif (Biru)
+    // Hapus class 'active' dari semua tombol beasiswa
+    document.querySelectorAll('.btn-beasiswa').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    // Tambahkan class 'active' ke tombol yang baru diklik
+    btnElement.classList.add('active');
+
+    // 2. Logika Menyembunyikan/Menampilkan Bagian
+    const allSections = document.querySelectorAll('.category-section');
+
+    allSections.forEach(section => {
+        if (categoryId === 'all') {
+            // Jika pilih 'Tampilkan Semua', munculkan semua section
+            section.style.display = 'block';
+            
+            // Animasi halus (Fade In)
+            section.style.opacity = '0';
+            setTimeout(() => section.style.opacity = '1', 100);
+        } else {
+            // Cek apakah ID section sama dengan kategori yang dipilih
+            if (section.id === categoryId) {
+                section.style.display = 'block';
+                
+                // Animasi halus
+                section.style.opacity = '0';
+                setTimeout(() => section.style.opacity = '1', 100);
+            } else {
+                // Sembunyikan yang tidak cocok
+                section.style.display = 'none';
+            }
+        }
+    });
+}

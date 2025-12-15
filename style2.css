@@ -7,68 +7,102 @@
 }
 
 body {
-    background: linear-gradient(180deg, #f0feff 0%, #84c0df 100%);
+    background: linear-gradient(270deg, #f0feff 0%, #34aae4 150%);
     min-height: 100vh;
     padding-bottom: 50px;
 }
 
 /* ================= NAVBAR ================= */
 /* =========================================
-   2. NAVBAR (MODEL KAPSUL & GLOSSY)
+   2. NAVBAR (TATA LETAK SESUAI GAMBAR)
    ========================================= */
 .navbar {
     background: #FFFFFF;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    border-radius: 50px; /* Bentuk Kapsul */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    max-width: 1100px;
-    margin: 0 auto 50px auto;
+    justify-content: space-between; /* Logo kiri mentok, Menu kanan mentok */
+    align-items: center;            /* Posisi vertikal tengah */
+    
+    /* Padding dan Ukuran */
+    padding: 10px 30px;             /* Memberi ruang napas yang cukup */
+    max-width: 1100px;              /* Lebar maksimal agar tidak terlalu lebar di layar besar */
+    margin: 30px auto 50px auto;    /* Posisi tengah halaman dengan jarak atas */
+    
+    /* Styling Bentuk */
+    border-radius: 50px;            /* Sudut sangat bulat (Kapsul) */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Bayangan halus melayang */
+    position: relative;
+    z-index: 1000;
 }
 
+/* Bagian Logo (Kiri) */
 .logo {
     display: flex;
     align-items: center;
-    font-weight: 700;
+    font-weight: 800;               /* Font tebal */
     color: #007bff;
-    font-size: 1.2rem;
-    padding-left: 10px;
+    font-size: 1.4rem;              /* Ukuran font logo pas */
+    /* Dihapus: padding-left agar posisi pas di ujung */
 }
 
 .logo img {
     height: 45px;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
+/* Bagian Menu (Kanan) */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
-    padding-right: 10px;
+    align-items: center;
+    gap: 15px;                      /* Jarak antar tombol diperlebar */
+    /* Dihapus: padding-right agar posisi pas di ujung */
 }
 
-/* Tombol Menu (Bentuk Pil Biru Mengkilap) */
+/* Tombol Menu (Bentuk Pil Biru) */
 .nav-links li a {
     text-decoration: none;
-    color: #000;
-    font-weight: 500;
-    padding: 8px 25px;
-    border-radius: 20px;
-    background: linear-gradient(180deg, #81D4FA 0%, #4FC3F7 100%); /* Gradasi Biru Cerah */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #000;                    /* Teks Hitam sesuai request */
+    font-weight: 600;               /* Sedikit tebal agar terbaca jelas */
+    font-size: 1rem;
+    
+    /* Dimensi Tombol */
+    padding: 10px 30px;             /* Padding kiri-kanan luas */
+    border-radius: 50px;            /* Bentuk Pil Sempurna */
+    
+    /* Warna Background (Gradasi Biru Cerah) */
+    background: linear-gradient(180deg, #81D4FA 0%, #4FC3F7 100%);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
     display: inline-block;
 }
 
-/* Efek Hover & Active */
+/* Efek Hover & Active (Biru Lebih Gelap) */
 .nav-links li a:hover, 
 .nav-links li a.active {
-    background: linear-gradient(180deg, #4FC3F7 0%, #29B6F6 100%); /* Biru lebih dalam */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,123,255, 0.2);
+    background: linear-gradient(180deg, #4FC3F7 0%, #29B6F6 100%);
+    transform: translateY(-3px);    /* Efek naik sedikit saat disentuh */
+    box-shadow: 0 6px 12px rgba(33, 150, 243, 0.3); /* Bayangan biru bersinar */
     color: #000;
+}
+
+/* Hamburger (Hanya muncul di HP) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block; width: 25px; height: 3px; margin: 5px auto;
+    background-color: #333; transition: 0.3s;
+}
+
+/* RESPONSIF: Agar tetap rapi di HP */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px; /* Padding lebih kecil di HP */
+        margin: 20px auto;
+    }
+    .hamburger { display: block; }
+    .nav-links { display: none; } /* Menu desktop hilang di HP */
 }
 
 /* ================= CONTAINER UTAMA ================= */
@@ -766,4 +800,8 @@ h3 {
         transform: translateY(-8px) rotate(-45deg); /* Garis bawah miring */
     }
 }
+}
+/* Animasi untuk Filter Kategori */
+.category-section {
+    transition: opacity 0.4s ease-in-out;
 }
