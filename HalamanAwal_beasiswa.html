@@ -2,38 +2,282 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Halaman Beasiswa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Beasiswa - NextStep</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
-    <nav>
-        <div>Logo
-            <img src="logo_web-removebg-preview.png" alt="">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo_web-removebg-preview.png" alt="Logo">
+            <span>NextStep</span>
         </div>
-
-        <ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-links">
             <li><a href="HalamanUtama.html">Home</a></li>
             <li><a href="HalamanAwal_lomba.html">Lomba</a></li>
-            <li><a href="HalamanAwal_beasiswa.html">Beasiswa</a></li>
+            <li><a href="HalamanAwal_beasiswa.html" class="active">Beasiswa</a></li>
             <li><a href="HalamanAwal_magang.html">Magang</a></li>
             <li><a href="HalamanAwal_volunteer.html">Volunteer</a></li>
         </ul>
     </nav>
 
-    <h2>Temukan Beasiswamu di Sini</h2>
+    <div class="beasiswa-container">
 
-    <div>
-        <input type="text" placeholder="Cari beasiswa sesuai minatmu">
-        <button>Cari Beasiswa</button>
-    </div>
+        <div class="beasiswa-header">
+            <h2>Temukan Beasiswamu di Sini</h2>
+            
+            <div class="search-wrapper-beasiswa">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Cari beasiswa sesuai minatmu">
+                <button onclick="searchItem()">Cari Beasiswa</button>
+            </div>
+        </div>
 
-    <h3>Temukan Berdasarkan Kategori</h3>
-    <img src="gambar beasiswa.png" alt="">
-    <div>
-        <button>Beasiswa Mahasiswa (S1/S2) ></button>
-        <button>Beasiswa Pelajar ></button>
-        <button>Beasiswa Luar Negeri ></button>
-    </div>
+        <div class="beasiswa-content">
+            
+            <div class="content-left-beasiswa">
+                <h3>Temukan Berdasarkan Kategori</h3>
+                <div class="beasiswa-button-stack">
+                    <button class="btn-beasiswa active" onclick="filterCategory('all', this)">
+                        Tampilkan Semua <span>&gt;</span>
+                    </button>
+                    <button class="btn-beasiswa" onclick="filterCategory('mahasiswa', this)">
+                        Beasiswa Mahasiswa (S1/S2) <span>&gt;</span>
+                    </button>
+                    <button class="btn-beasiswa" onclick="filterCategory('pelajar', this)">
+                        Beasiswa Pelajar <span>&gt;</span>
+                    </button>
+                    <button class="btn-beasiswa" onclick="filterCategory('luar-negeri', this)">
+                        Beasiswa Luar Negeri <span>&gt;</span>
+                    </button>
+                </div>
+            </div>
 
+            <div class="content-right-beasiswa">
+                <img src="gambar beasiswa.png" alt="Ilustrasi Beasiswa">
+            </div>
+
+        </div>
+
+        <div class="scholarship-lists">
+            
+            <div class="category-section" id="mahasiswa">
+                <h2 class="section-title">Beasiswa Mahasiswa (S1/S2)</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa1.jpeg" alt="Beasiswa PPI">
+                        </div>
+                        <div class="card-body">
+                            <h4>Beasiswa PPI</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Mahasiswa</span></p>
+                                <p>Status: <span>Online</span></p>
+                                <p>Biaya: <span>Gratis</span></p>
+                                <p>Batas Akhir: <span>28 Feb 2025</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa2.jpeg" alt="Beasiswa Aktivis NU">
+                        </div>
+                        <div class="card-body">
+                            <h4>Beasiswa Aktivis NU</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Mahasiswa</span></p>
+                                <p>Status: <span>Online</span></p>
+                                <p>Biaya: <span>Gratis</span></p>
+                                <p>Batas Akhir: <span>15 Des 2025</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa3.jpeg" alt="Beasiswa Kampung Inggris">
+                        </div>
+                        <div class="card-body">
+                            <h4>Beasiswa Kampung Inggris 50%</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Mahasiswa & Umum</span></p>
+                                <p>Status: <span>Offline</span></p>
+                                <p>Biaya: <span>Berbayar (Diskon)</span></p>
+                                <p>Batas Akhir: <span>Maret 2026</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+
+                     <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa4.jpeg" alt="Beasiswa Nganjuk">
+                        </div>
+                        <div class="card-body">
+                            <h4>Beasiswa Kabupaten Nganjuk</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Mahasiswa Nganjuk</span></p>
+                                <p>Status: <span>Online</span></p>
+                                <p>Biaya: <span>Gratis</span></p>
+                                <p>Batas Akhir: <span>08 Des 2025</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="pelajar">
+                <h2 class="section-title">Beasiswa Pelajar</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa5.jpeg" alt="Beasiswa Mentari">
+                        </div>
+                        <div class="card-body">
+                            <h4>Beasiswa Mentari Lazismu UMY</h4>
+                            <div class="card-info">
+                                <p>Target: <span>SD, SMP, SMA</span></p>
+                                <p>Status: <span>Online</span></p>
+                                <p>Biaya: <span>Gratis</span></p>
+                                <p>Batas Akhir: <span>-</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa6.jpeg" alt="Akademi Prestasi">
+                        </div>
+                        <div class="card-body">
+                            <h4>Beasiswa Akademi Prestasi</h4>
+                            <div class="card-info">
+                                <p>Target: <span>SMA & Mahasiswa</span></p>
+                                <p>Status: <span>Online</span></p>
+                                <p>Biaya: <span>Gratis</span></p>
+                                <p>Batas Akhir: <span>15 Des 2025</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    
+                     <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa7.jpeg" alt="Beasiswa Central">
+                        </div>
+                        <div class="card-body">
+                            <h4>Beasiswa Central Kampung Inggris</h4>
+                            <div class="card-info">
+                                <p>Target: <span>SMA & Umum</span></p>
+                                <p>Status: <span>Offline</span></p>
+                                <p>Biaya: <span>Berbayar</span></p>
+                                <p>Batas Akhir: <span>Mar 2026</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+
+                     <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa8.jpeg" alt="Kampung Inggris 50%">
+                        </div>
+                        <div class="card-body">
+                            <h4>Kampung Inggris Beasiswa 50%</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Pelajar & Umum</span></p>
+                                <p>Status: <span>Offline</span></p>
+                                <p>Biaya: <span>Berbayar</span></p>
+                                <p>Batas Akhir: <span>Mar 2026</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="luar-negeri">
+                <h2 class="section-title">Beasiswa Luar Negeri</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa9.jpeg" alt="Study Abroad">
+                        </div>
+                        <div class="card-body">
+                            <h4>The Study Abroad Exclusive</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Pelajar & Mhs</span></p>
+                                <p>Status: <span>Online</span></p>
+                                <p>Biaya: <span>Gratis</span></p>
+                                <p>Batas Akhir: <span>21 Des 2025</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa10.jpeg" alt="ASEAN Batch 3">
+                        </div>
+                        <div class="card-body">
+                            <h4>STYLE ASEAN Batch 3</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Semua Jurusan</span></p>
+                                <p>Status: <span>Offline (LN)</span></p>
+                                <p>Biaya: <span>Self Funded</span></p>
+                                <p>Batas Akhir: <span>-</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+
+                     <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa11.jpeg" alt="Study Abroad 2">
+                        </div>
+                        <div class="card-body">
+                            <h4>Study Abroad Exclusive (Sesi 2)</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Pelajar & Mhs</span></p>
+                                <p>Status: <span>Online</span></p>
+                                <p>Biaya: <span>Gratis</span></p>
+                                <p>Batas Akhir: <span>-</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+
+                     <div class="card">
+                        <div class="card-image">
+                            <img src="beasiswa12.jpeg" alt="Singapore Batch 13">
+                        </div>
+                        <div class="card-body">
+                            <h4>STYLE Singapore Batch 13</h4>
+                            <div class="card-info">
+                                <p>Target: <span>Semua Jurusan</span></p>
+                                <p>Status: <span>Offline (SG)</span></p>
+                                <p>Biaya: <span>Self Funded</span></p>
+                                <p>Batas Akhir: <span>-</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>

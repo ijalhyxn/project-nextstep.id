@@ -2,41 +2,238 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Halaman Lomba</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Lomba - NextStep</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div>Logo
-            <img src="logo_web-removebg-preview.png" alt="">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo_web-removebg-preview.png" alt="Logo">
+            <span>NextStep</span>
         </div>
-        <ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-links">
             <li><a href="HalamanUtama.html">Home</a></li>
-            <li><a href="HalamanAwal_lomba.html">Lomba</a></li>
+            <li><a href="HalamanAwal_lomba.html" class="active">Lomba</a></li>
             <li><a href="HalamanAwal_beasiswa.html">Beasiswa</a></li>
             <li><a href="HalamanAwal_magang.html">Magang</a></li>
             <li><a href="HalamanAwal_volunteer.html">Volunteer</a></li>
         </ul>
     </nav>
 
-    <h2>Temukan lomba di dalam & luar negeri</h2>
+    <div class="lomba-container">
 
-    <!-- Search -->
-    <div>
-        <img src="gambar lomba.png" alt="">
-        <input type="text" placeholder="Cari lomba atau kompetisi">
-        <button>Cari Lomba</button>
+        <div class="lomba-header">
+            <h2>Temukan Lomba di Dalam & Luar Negeri</h2>
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Cari lomba atau kompetisi">
+                <button>Cari Lomba</button>
+            </div>
+        </div>
+
+        <div class="lomba-content">
+            <div class="content-left-lomba">
+                <h3>Temukan Berdasarkan Kategori</h3>
+                <div class="lomba-buttons">
+                    <button class="lomba-btn" onclick="scrollToCategory('finance')">
+                        <img src="ikon uang lomba.png" alt="Icon" class="btn-icon">
+                        <span>Finance & Business</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="lomba-btn" onclick="scrollToCategory('academics')">
+                        <img src="ikon academics lomba.png" alt="Icon" class="btn-icon">
+                        <span>Academics</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="lomba-btn" onclick="scrollToCategory('creative')">
+                        <img src="ikon creative lomba.png" alt="Icon" class="btn-icon">
+                        <span>Creative & Arts</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="lomba-btn" onclick="scrollToCategory('technology')">
+                        <img src="ikon teknologi lomba.png" alt="Icon" class="btn-icon">
+                        <span>Technology</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="content-right-lomba">
+                <img src="gambar lomba.png" alt="Ilustrasi Piala Lomba">
+            </div>
+        </div>
+
+        <div class="scholarship-lists">
+            
+            <div class="category-section" id="finance">
+                <h2 class="section-title">Finance & Business Competition</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="lomba1.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Business Case Challenge</h4>
+                            <div class="card-info"><p>Kategori: <span>Mahasiswa</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba2.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>National Trading Comp</h4>
+                            <div class="card-info"><p>Kategori: <span>Umum</span></p><p>Biaya: <span>Berbayar</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba3.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Entrepreneur Summit</h4>
+                            <div class="card-info"><p>Kategori: <span>SMA/S1</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba4.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Accounting Fair 2025</h4>
+                            <div class="card-info"><p>Kategori: <span>Mahasiswa</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="academics">
+                <h2 class="section-title">Academics & Research</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="lomba5.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Olimpiade Sains Nas</h4>
+                            <div class="card-info"><p>Kategori: <span>SMA</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba6.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Paper Competition</h4>
+                            <div class="card-info"><p>Kategori: <span>Mahasiswa</span></p><p>Biaya: <span>Berbayar</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba7.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Essay Writing 2025</h4>
+                            <div class="card-info"><p>Kategori: <span>Umum</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba8.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Debate Championship</h4>
+                            <div class="card-info"><p>Kategori: <span>Varsity</span></p><p>Biaya: <span>Berbayar</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="creative">
+                <h2 class="section-title">Creative & Arts</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="lomba9.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Poster Design Fest</h4>
+                            <div class="card-info"><p>Kategori: <span>Umum</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba10.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Short Movie Award</h4>
+                            <div class="card-info"><p>Kategori: <span>Umum</span></p><p>Biaya: <span>Berbayar</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba11.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Photography Contest</h4>
+                            <div class="card-info"><p>Kategori: <span>Pelajar</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba12.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Music Cover Challenge</h4>
+                            <div class="card-info"><p>Kategori: <span>Umum</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="technology">
+                <h2 class="section-title">Technology & IT</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="lomba13.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Hackathon Indonesia</h4>
+                            <div class="card-info"><p>Kategori: <span>Mahasiswa</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba14.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>UI/UX Design Comp</h4>
+                            <div class="card-info"><p>Kategori: <span>Umum</span></p><p>Biaya: <span>Berbayar</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba15.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Game Dev Jam 2025</h4>
+                            <div class="card-info"><p>Kategori: <span>Tim</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="lomba16.jpeg" alt="Lomba"></div>
+                        <div class="card-body">
+                            <h4>Game Dev Jam 2025</h4>
+                            <div class="card-info"><p>Kategori: <span>Tim</span></p><p>Biaya: <span>Gratis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <h3>Temukan Berdasarkan Kategori</h3>
-
-    <div>
-        <button>Finance & Business ><img src="ikon uang lomba.png" alt=""></button>
-        <button>Academics ><img src="ikon academics lomba.png" alt=""></button>
-        <button>Creative ><img src="ikon creative lomba.png" alt=""></button>
-        <button>Technology ><img src="ikon teknologi lomba.png" alt=""></button>
-    </div>
-
+    
+    <script src="script.js"></script> 
+    <script>
+        function scrollToCategory(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>

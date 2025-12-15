@@ -2,37 +2,178 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Halaman Magang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Magang - NextStep</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
-    <nav>
-        <div>Logo
-            <img src="logo_web-removebg-preview.png" alt="">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo_web-removebg-preview.png" alt="Logo">
+            <span>NextStep</span>
         </div>
-        <ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-links">
             <li><a href="HalamanUtama.html">Home</a></li>
             <li><a href="HalamanAwal_lomba.html">Lomba</a></li>
             <li><a href="HalamanAwal_beasiswa.html">Beasiswa</a></li>
-            <li><a href="HalamanAwal_magang.html">Magang</a></li>
+            <li><a href="HalamanAwal_magang.html" class="active">Magang</a></li>
             <li><a href="HalamanAwal_volunteer.html">Volunteer</a></li>
         </ul>
     </nav>
 
-    <h2>Temukan Program Magang Terbaik untuk Kariermu</h2>
-    <img src="gambar magang.png" alt="">
+    <div class="magang-container">
 
-    <div>
-        <input type="text" placeholder="Cari magangmu disini">
-        <button>Cari Magang</button>
+        <div class="magang-header">
+            <h2>Temukan Program Magang Terbaik untuk Kariermu</h2>
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Cari posisi magang atau perusahaan">
+                <button>Cari Magang</button>
+            </div>
+        </div>
+
+        <div class="magang-content">
+            <div class="content-left-magang">
+                <h3>Temukan Berdasarkan Kategori</h3>
+                <div class="magang-buttons">
+                    <button class="btn-magang" onclick="scrollToCategory('dalam-negeri')">
+                        <span>Magang Dalam Negeri</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="btn-magang" onclick="scrollToCategory('bersertifikat')">
+                        <span>Magang Bersertifikat</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="btn-magang" onclick="scrollToCategory('bersertifikat')">
+                        <span>Magang BUMN / Instansi</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-right-magang">
+                <img src="gambar magang.png" alt="Ilustrasi Magang">
+            </div>
+        </div>
+
+        <div class="scholarship-lists">
+            
+            <div class="category-section" id="dalam-negeri">
+                <h2 class="section-title">Magang Dalam Negeri</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="magang1.jpeg" alt="Magang"></div>
+                        <div class="card-body">
+                            <h4>Digital Marketing Intern</h4>
+                            <div class="card-info">
+                                <p>Tipe: <span>WFO (Jakarta)</span></p>
+                                <p>Gaji: <span>Paid</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="2magang.jpeg" alt="Magang"></div>
+                        <div class="card-body">
+                            <h4>Business Development</h4>
+                            <div class="card-info">
+                                <p>Tipe: <span>Remote</span></p>
+                                <p>Gaji: <span>Unpaid</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="3magang.jpeg" alt="Magang"></div>
+                        <div class="card-body">
+                            <h4>Graphic Design Staff</h4>
+                            <div class="card-info">
+                                <p>Tipe: <span>Hybrid</span></p>
+                                <p>Gaji: <span>Paid</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="4magang.jpeg" alt="Magang"></div>
+                        <div class="card-body">
+                            <h4>Content Creator Intern</h4>
+                            <div class="card-info">
+                                <p>Tipe: <span>WFO (Bandung)</span></p>
+                                <p>Gaji: <span>Paid</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="bersertifikat">
+                <h2 class="section-title">Magang Bersertifikat & MSIB</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="5magang.jpeg" alt="Magang"></div>
+                        <div class="card-body">
+                            <h4>MSIB Batch 7 - Tech</h4>
+                            <div class="card-info">
+                                <p>Mitra: <span>GoTo Group</span></p>
+                                <p>Status: <span>Bersertifikat</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="6magang.jpeg" alt="Magang"></div>
+                        <div class="card-body">
+                            <h4>Magang Bakti BCA</h4>
+                            <div class="card-info">
+                                <p>Mitra: <span>Bank BCA</span></p>
+                                <p>Status: <span>Official</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="7magang.jpeg" alt="Magang"></div>
+                        <div class="card-body">
+                            <h4>Data Analyst Intern</h4>
+                            <div class="card-info">
+                                <p>Mitra: <span>Telkomsel</span></p>
+                                <p>Status: <span>Bersertifikat</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="8magang.jpeg" alt="Magang"></div>
+                        <div class="card-body">
+                            <h4>Human Capital Intern</h4>
+                            <div class="card-info">
+                                <p>Mitra: <span>Pertamina</span></p>
+                                <p>Status: <span>BUMN</span></p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
     </div>
 
-    <h3>Temukan Berdasarkan Kategori</h3>
-
-    <div>
-        <button>Magang Dalam Negeri ></button>
-        <button>Magang Bersertifikat ></button>
-    </div>
-
+    <script src="script.js"></script> 
+    <script>
+        function scrollToCategory(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>

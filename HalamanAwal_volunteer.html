@@ -2,38 +2,234 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Halaman Volunteer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Volunteer - NextStep</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-<!-- navbar -->
-    <nav>
-        <div>Logo
-            <img src="logo_web-removebg-preview.png" alt="">
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo_web-removebg-preview.png" alt="Logo">
+            <span>NextStep</span>
         </div>
-        <ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        
+        <ul class="nav-links">
             <li><a href="HalamanUtama.html">Home</a></li>
             <li><a href="HalamanAwal_lomba.html">Lomba</a></li>
             <li><a href="HalamanAwal_beasiswa.html">Beasiswa</a></li>
             <li><a href="HalamanAwal_magang.html">Magang</a></li>
-            <li><a href="HalamanAwal_volunteer.html">Volunteer</a></li>
+            <li><a href="HalamanAwal_volunteer.html" class="active">Volunteer</a></li>
         </ul>
     </nav>
 
-    <h2>Temukan Program Volunteermu</h2>
+    <div class="volunteer-container">
 
-    <div>
-        <input type="text" placeholder="Cari kegiatan yang sesuai minatmu">
-        <button>Cari Volunteer</button>
+        <div class="volunteer-header">
+            <h2>Temukan Program Volunteer & Aksi Sosial</h2>
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Cari kegiatan sosial...">
+                <button>Cari Volunteer</button>
+            </div>
+        </div>
+
+        <div class="volunteer-content">
+            <div class="content-left-volunteer">
+                <h3>Temukan Berdasarkan Kategori</h3>
+                <div class="volunteer-buttons">
+                    <button class="btn-volunteer" onclick="scrollToCategory('sosial')">
+                        <span>Volunteer Sosial</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="btn-volunteer" onclick="scrollToCategory('kesehatan')">
+                        <span>Volunteer Kesehatan</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="btn-volunteer" onclick="scrollToCategory('pendidikan')">
+                        <span>Volunteer Pendidikan</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                    <button class="btn-volunteer" onclick="scrollToCategory('lingkungan')">
+                        <span>Volunteer Lingkungan</span>
+                        <span class="arrow">&gt;</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-right-volunteer">
+                <img src="gambar volunteer.png" alt="Ilustrasi Volunteer">
+            </div>
+        </div>
+
+        <div class="scholarship-lists">
+            
+            <div class="category-section" id="sosial">
+                <h2 class="section-title">Volunteer Sosial & Kemanusiaan</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="1volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Relawan Bencana Alam</h4>
+                            <div class="card-info"><p>Lokasi: <span>Jawa Barat</span></p><p>Sifat: <span>Urgent</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="2volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Bakti Sosial Panti</h4>
+                            <div class="card-info"><p>Lokasi: <span>Jakarta</span></p><p>Sifat: <span>Weekend</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="3volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Dapur Umum Warga</h4>
+                            <div class="card-info"><p>Lokasi: <span>Surabaya</span></p><p>Sifat: <span>Harian</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="4volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Distribusi Sembako</h4>
+                            <div class="card-info"><p>Lokasi: <span>Medan</span></p><p>Sifat: <span>Event</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="kesehatan">
+                <h2 class="section-title">Volunteer Kesehatan</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="5volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Donor Darah Masal</h4>
+                            <div class="card-info"><p>Mitra: <span>PMI</span></p><p>Sifat: <span>Umum</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="6volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Posyandu Remaja</h4>
+                            <div class="card-info"><p>Lokasi: <span>Desa Binaan</span></p><p>Sifat: <span>Rutin</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="7volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Cek Kesehatan Gratis</h4>
+                            <div class="card-info"><p>Mitra: <span>RSUD</span></p><p>Sifat: <span>Medis</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="8volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Relawan Vaksinasi</h4>
+                            <div class="card-info"><p>Lokasi: <span>Puskesmas</span></p><p>Sifat: <span>Admin</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="pendidikan">
+                <h2 class="section-title">Volunteer Pendidikan</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="9volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Mengajar di Pedalaman</h4>
+                            <div class="card-info"><p>Durasi: <span>1 Bulan</span></p><p>Fasilitas: <span>Ada</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="10volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Rumah Belajar Ceria</h4>
+                            <div class="card-info"><p>Lokasi: <span>Kolong Jembatan</span></p><p>Sifat: <span>Mingguan</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="11volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Donasi Buku & Literasi</h4>
+                            <div class="card-info"><p>Lokasi: <span>Perpustakaan</span></p><p>Sifat: <span>Fleksibel</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="12volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Mentor Digital Skill</h4>
+                            <div class="card-info"><p>Sistem: <span>Online</span></p><p>Sifat: <span>Mentoring</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="lingkungan">
+                <h2 class="section-title">Volunteer Lingkungan</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-image"><img src="13volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Penanaman Bakau</h4>
+                            <div class="card-info"><p>Lokasi: <span>Pesisir</span></p><p>Target: <span>1000 Pohon</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="14volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Beach Clean Up</h4>
+                            <div class="card-info"><p>Lokasi: <span>Bali</span></p><p>Sifat: <span>Event</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="15volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Pengolahan Sampah</h4>
+                            <div class="card-info"><p>Lokasi: <span>Bank Sampah</span></p><p>Sifat: <span>Edukasi</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-image"><img src="16volun.jpeg" alt="Volunteer"></div>
+                        <div class="card-body">
+                            <h4>Reboisasi Hutan Kota</h4>
+                            <div class="card-info"><p>Lokasi: <span>Taman Kota</span></p><p>Sifat: <span>Rutin</span></p></div>
+                        </div>
+                        <a href="#" class="btn-detail">More Detail >></a>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
     </div>
 
-    <h3>Temukan Berdasarkan Kategori</h3>
-
-    <div>
-        <button>Volunteer Sosial ></button>
-        <button>Volunteer Kesehatan ></button>
-        <button>Volunteer Pendidikan ></button>
-        <button>Volunteer Lingkungan ></button>
-    </div>
-<img src="gambar volunteer.png" alt="">
+    <script src="script.js"></script> 
+    <script>
+        function scrollToCategory(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
