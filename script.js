@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let categoryName = btn.innerText.replace('>', '').trim();
             
             // Tampilkan pesan interaktif
-            alert(`Membuka kategori: ${categoryName}`);
+            
             
             // Di sini nanti kamu bisa tambahkan logika pindah halaman, contoh:
             // window.location.href = `kategori_${categoryName.toLowerCase().replace(/ /g, '_')}.html`;
